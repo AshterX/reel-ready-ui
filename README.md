@@ -1,73 +1,150 @@
-# Welcome to your Lovable project
 
-## Project info
+# Video Editor Web App 🎬
 
-**URL**: https://lovable.dev/projects/0042bc59-da03-4812-9cd9-fd600ec4b75f
+A modern, creator-facing video editor built with React, TypeScript, and Tailwind CSS. This application allows users to upload videos, perform basic editing operations, and preview results in a clean, intuitive interface.
 
-## How can I edit this code?
+## 🚀 How to Run the Project
 
-There are several ways of editing your application.
+### Prerequisites
+- Node.js (v16 or higher)
+- npm or yarn
 
-**Use Lovable**
+### Installation & Setup
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/0042bc59-da03-4812-9cd9-fd600ec4b75f) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
+```bash
+# Clone the repository
 git clone <YOUR_GIT_URL>
 
-# Step 2: Navigate to the project directory.
+# Navigate to the project directory
 cd <YOUR_PROJECT_NAME>
 
-# Step 3: Install the necessary dependencies.
-npm i
+# Install dependencies
+npm install
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Start the development server
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+The application will be available at `http://localhost:8080`
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### Build for Production
 
-**Use GitHub Codespaces**
+```bash
+# Create production build
+npm run build
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+# Preview production build
+npm run preview
+```
 
-## What technologies are used for this project?
+## 🎯 Project Focus: **Frontend**
 
-This project is built with:
+This project focuses on creating a complete, polished frontend experience for video editing. The emphasis is on:
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+- **User Experience**: Clean, modern interface with smooth interactions
+- **State Management**: Robust state handling using Zustand
+- **Component Architecture**: Modular, reusable components following React best practices
+- **Responsive Design**: Mobile-first approach with Tailwind CSS
+- **TypeScript**: Full type safety throughout the application
 
-## How can I deploy this project?
+## ✨ Core Features Implemented
 
-Simply open [Lovable](https://lovable.dev/projects/0042bc59-da03-4812-9cd9-fd600ec4b75f) and click on Share -> Publish.
+### 📁 Video Upload
+- Drag-and-drop video upload interface
+- File type validation (video files only)
+- Instant preview generation using object URLs
 
-## Can I connect a custom domain to my Lovable project?
+### 🎥 Video Preview Player
+- Custom video player with standard controls
+- Real-time preview of uploaded content
+- Responsive video container
 
-Yes, you can!
+### ✂️ Editing Operations
+1. **Trim Video**: Set start and end times for video segments
+2. **Mute/Unmute**: Toggle audio on/off
+3. **Overlay Text**: Add custom text overlays to videos
+4. **Thumbnail Generation**: Create custom thumbnails from video frames
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+### 🎨 Result Viewer
+- Preview edited video settings
+- Download simulation for processed content
+- Clean result display interface
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+## 🏆 Bonus Features Implemented
+
+### 🗃️ Advanced State Management
+- **Zustand Store**: Centralized state management for all video editing operations
+- **Persistent State**: Maintains editing state across component re-renders
+- **Type-Safe Actions**: Fully typed state actions and selectors
+
+### 🎨 Modern UI/UX
+- **Gradient Backgrounds**: Beautiful gradient designs
+- **Smooth Animations**: CSS transitions and hover effects
+- **Loading States**: Visual feedback during processing
+- **Responsive Layout**: Works seamlessly on desktop and mobile
+
+### 🏗️ Clean Architecture
+- **Component Separation**: Each feature in its own focused component
+- **Custom Hooks**: Reusable logic extraction
+- **TypeScript Integration**: Full type safety and IntelliSense support
+- **Modular Structure**: Easy to extend and maintain
+
+## 🛠️ Technology Stack
+
+- **Framework**: React 18 with TypeScript
+- **Build Tool**: Vite
+- **Styling**: Tailwind CSS
+- **UI Components**: Shadcn/ui
+- **State Management**: Zustand
+- **Icons**: Lucide React
+- **Routing**: React Router DOM
+
+## 📁 Project Structure
+
+```
+src/
+├── components/           # React components
+│   ├── VideoUpload.tsx  # File upload interface
+│   ├── VideoPlayer.tsx  # Video preview player
+│   ├── EditorControls.tsx # Editing operation controls
+│   ├── ResultViewer.tsx # Result display and download
+│   └── ui/              # Reusable UI components
+├── store/               # Zustand state management
+│   └── videoEditor.ts   # Main editor state store
+├── pages/               # Application pages
+│   └── Index.tsx        # Main application page
+└── App.tsx              # Root application component
+```
+
+## 🎯 Future Enhancements
+
+### Potential Backend Integration
+- **File Storage**: Supabase/S3 integration for persistent video storage
+- **Processing Queue**: Background video processing with job status
+- **User Authentication**: Multi-user support with personal libraries
+- **Export Formats**: Multiple output format support (MP4, WebM, etc.)
+
+### Advanced Features
+- **Timeline Editor**: Visual timeline for precise editing
+- **Multiple Tracks**: Support for multiple video/audio tracks
+- **Filters & Effects**: Color correction and visual effects
+- **Collaboration**: Real-time collaborative editing
+
+## 🚀 Getting Started with Development
+
+1. **Upload a Video**: Click "Choose Video File" to select a video
+2. **Edit**: Use the controls to trim, mute, or add text overlays
+3. **Preview**: See your changes reflected in the player
+4. **Process**: Click "Process Video" to simulate editing
+5. **Download**: Get your edited video result
+
+## 📝 Notes
+
+- This is a frontend-focused implementation with simulated backend operations
+- Video processing is mocked for demonstration purposes
+- For production use, integrate with a video processing service
+- All state is managed client-side using Zustand
+
+---
+
+Built with ❤️ using [Lovable](https://lovable.dev) - The AI-powered React development platform
